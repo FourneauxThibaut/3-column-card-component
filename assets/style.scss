@@ -1,0 +1,112 @@
+// The designs were created to the following widths:
+// - Mobile: 375px
+// - Desktop: 1440px
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$Bright-orange: #e38826;
+$Dark-cyan: #006970;
+$Very-dark-cyan: #004241;
+
+$Transparent-white: #ffffffbf;
+$Very-light-gray: #f2f2f2;
+
+@mixin font-lexend {
+    font-family: 'Lexend Deca', sans-serif;
+}
+@mixin font-shoulders {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+body{
+    font-size: 15px;
+    @include font-lexend();
+}
+.attribution { 
+    
+    font-size: 11px; 
+    text-align: center;
+
+    a { color: #3e52a3; }
+}
+
+main{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    h1{
+        margin-top: -100px;
+        padding: 50px;
+        font-size: 3rem;
+        text-transform: uppercase;
+        word-spacing: 15px;
+    }
+}
+
+.cards-container{
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    article{
+        position: relative;
+        padding: 50px;
+
+        h2{
+            @include font-shoulders();
+            font-size: 2.5rem;
+            color: $Very-light-gray;
+            text-transform: uppercase;
+        }
+        p{
+            color: $Transparent-white;
+            width: 80%;
+            line-height: 1.7rem;
+            letter-spacing: 0.05rem;
+            margin-bottom: 100px;
+        }
+        a{
+            position: absolute;
+            bottom: 40px;
+            background-color: $Very-light-gray;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            transition-duration: 1.2s;
+
+            &:hover{
+                font-size: 1.6rem;
+                transition-duration: 0.5s;
+            }
+        }
+        &:nth-child(1){
+            background-color: $Bright-orange;
+            border-radius: 8px 0 0 8px;
+            a{
+                color: $Bright-orange;
+            }
+        }
+        &:nth-child(2){
+            background-color: $Dark-cyan;
+            a{
+                color: $Dark-cyan;
+            }
+        }
+        &:nth-child(3){
+            background-color: $Very-dark-cyan;
+            border-radius: 0 8px 8px 0;
+            a{
+                color: $Very-dark-cyan;
+            }
+        }
+    }
+}
