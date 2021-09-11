@@ -51,14 +51,17 @@ main{
     width: 60%;
     margin: 0 auto;
     border-radius: 5px;
-
     display: flex;
     justify-content: center;
-    align-items: center;
 
     article{
         position: relative;
         padding: 50px;
+
+        img{
+            height: auto;
+            max-width: 35%;
+        }
 
         h2{
             @include font-shoulders();
@@ -78,14 +81,17 @@ main{
             bottom: 40px;
             background-color: $Very-light-gray;
             text-decoration: none;
-            padding: 15px 25px;
-            border-radius: 60px;
+            padding: 12px 23px;
+            border-radius: 70px;
+            border: 3px solid transparent;
             font-size: 1.2rem;
-            transition-duration: 1.2s;
+            transition-duration: 1.3s;
 
             &:hover{
-                font-size: 1.6rem;
-                transition-duration: 0.5s;
+                color: $Very-light-gray !important;
+                background-color: transparent;
+                border: 3px solid $Very-light-gray;
+                transition-duration: 0.7s;
             }
         }
         &:nth-child(1){
@@ -106,6 +112,95 @@ main{
             border-radius: 0 8px 8px 0;
             a{
                 color: $Very-dark-cyan;
+            }
+        }
+    }
+}
+footer{
+    .mg-right{
+        margin-right: 7px;
+    }
+    a{
+        text-decoration: none;
+        color: $Bright-orange !important;
+        font-size: 0.89rem;
+        padding: 2px 3.5px;
+        transition-duration: 0.7s;
+        
+        &:hover{
+            background-color: $Bright-orange;
+            color: $Very-light-gray !important;
+            border-radius: 5px;
+            transition-duration: 0.4s;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .cards-container{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 1250px){
+    .cards-container{
+        width: 85%;
+    }
+}
+@media screen and (max-width: 1050px){
+    .cards-container{
+        width: 97%;
+
+        article{
+            p{
+                width: 90%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 850px){
+    main{
+        height: auto;
+
+        h1{
+            margin-top: 50px;
+            text-align: center;
+        }
+    }
+        
+    .cards-container{
+        width: 80%;
+        padding: 20px 0 40px 0;
+        flex-direction: column;
+
+        article{
+            &:nth-child(1){
+                background-color: $Bright-orange;
+                border-radius: 8px 8px 0 0;
+                a{
+                    color: $Bright-orange;
+                }
+            }
+            &:nth-child(3){
+                background-color: $Very-dark-cyan;
+                border-radius: 0 0 8px 8px;
+                a{
+                    color: $Very-dark-cyan;
+                }
+            }
+        }
+    }
+
+    footer{
+        margin: 5px 0 35px;
+    }
+}
+@media screen and (max-width: 450px){
+    .cards-container{
+        width: 99.5%;
+
+        article{
+            p{
+                width: 100%;
             }
         }
     }
