@@ -29,16 +29,20 @@ Users should be able to:
 
 ### Screenshot
 
-![full screen result](./render/full_screen_render.png)
+<p align="center">
+  <img width="90%" height="auto" src="./render/full_screen_render.png" alt="full screen result">
+</p>
 
-![medium screen result](./render/laptop_screen_render.png)
+<p align="center">
+  <img width="90%" height="auto" src="./render/laptop_screen_render.png" alt="medium screen result">
+</p>
 
 <p align="center">
   <img width="65%" height="auto" src="./render/mobile_screen_render.png" alt="mobile screen result">
 </p>
 
 <p align="center">
-  <img width="90%" height="auto" src="./render/lighthouse_report.png" alt="mobile screen result">
+  <img width="90%" height="auto" src="./design/render/lighthouse_report.png" alt="lighthouse report">
 </p>
 
 ### Links
